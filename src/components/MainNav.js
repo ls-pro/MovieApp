@@ -9,14 +9,18 @@ import SearchIcon from '@material-ui/icons/Search';
 import TvIcon from '@material-ui/icons/Tv';
 import { useHistory } from 'react-router-dom';
 
+
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
     position: "fixed",
     bottom:0,
-    backgroundColor: "#2d313a",
+    backgroundColor: "#152238",
     zIndex: 100,
   },
+
+ 
 });
 
 export default function SimpleBottomNavigation() {
@@ -29,9 +33,12 @@ export default function SimpleBottomNavigation() {
       else if (value === 1) history.push("/movies");
       else if (value === 2) history.push("/series");
       else if (value === 3) history.push("/search");
+      // eslint-disable-next-line
   }, [value, history])
 
   return (
+    <div className="nav"> 
+    
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
@@ -64,5 +71,6 @@ export default function SimpleBottomNavigation() {
       
     
     </BottomNavigation>
+    </div>
   );
 }
