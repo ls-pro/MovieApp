@@ -4,7 +4,7 @@ import "./Header.css"
 export const Header = () => {
     return (
         <span onClick={() => window.scroll(0, 0)} className="header">
-      🎬 Show Zone 🎥
+      🎬 Movie Zone 🎥
     </span>
     )
 };
